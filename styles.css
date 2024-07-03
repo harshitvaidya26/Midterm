@@ -1,0 +1,224 @@
+/* Basic Reset for Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a9d4cf;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    text-align: center;
+    margin: 0; /* Remove top margin if any */
+    padding: 0; /* Remove top padding if any */
+    position: relative; /* Add this to allow absolute positioning inside */
+}
+.header-container {
+    padding: 0;
+    width: 1024px;
+    margin: 0 auto;
+}
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0; /* Ensure no margin */
+}
+header h1 {
+    position: absolute;
+    bottom: 97px; /* Adjust this value to match the exact position in your screenshot */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3.3em; /* Adjust font size to make it less bold */
+    font-weight: normal; /* Set font weight to normal */
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    width: 1024px;
+    background-color: #d4e7e7;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+nav ul li {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.5em; /* Increase the font size */
+    position: relative;
+    padding: 0 20px; /* Adjust padding to give space for separator lines */
+}
+nav ul li:not(:last-child)::after {
+    content: "|"; /* Use the "|" character as the separator */
+    color: #333; /* Color of the separator */
+    position: absolute;
+    right: -97px; /* Adjust position to move the separator to the center space between options */
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* Main Content Styles */
+main {
+    width: 1024px;
+    background-color: #d4e7e7;
+    padding: 20px;
+    margin: 0 auto; /* Center the main content */
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start; /* Align items to the start */
+}
+
+/* Heading and Image Container */
+.heading-image-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; /* Space below the container */
+}
+
+.article-image {
+    float: left; /* Float the image to the left */
+    margin-right: 20px; /* Space between image and text */
+    margin-bottom: 10px; /* Space below the image */
+    width: 25.66%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h2 {
+    font-size: 2em; /* Adjust this value to increase or decrease the size */
+    margin-bottom: 10px;
+    text-align: left; /* Align heading to the left */
+}
+
+/* Additional styling for the article content */
+.article-content {
+    overflow: hidden; /* Clear the float */
+    margin-top: 20px; /* Adjust this margin for Space 2 */
+}
+
+.article-content p {
+    text-align: justify;
+    font-size: 1em; /* Adjust the font size as needed */
+    line-height: 1.6; /* Adjust the line height for readability */
+}
+.bold-text {
+    font-weight: bold; /* Bold the text */
+}
+/* Facts Section */
+.facts {
+    width: 100%;
+    margin-bottom: 0; /* No space between sections */
+    text-align: left;
+    padding-bottom: 0; /* Ensure no padding at the bottom */
+}
+.facts h2 {
+    margin-bottom: 0; /* Remove bottom margin of the heading */
+}
+
+/* Contact Section Styles */
+.contact {
+    width: 1024px;
+    background-color: #d4e7e7; /* Match the background color of the main content */
+    padding: 20px;
+    margin: 0 auto; /* Center the contact section */
+    padding-top: 0; /* Remove top padding */
+    margin-top: 0; /* Remove top margin */
+}
+.contact h2 {
+    margin-top: 0; /* Remove top margin of the heading */
+}
+.visit-label {
+    font-size: 1.2em; /* Adjust the font size as desired */
+    margin-bottom: 10px; /* Add some space below the label if needed */
+    display: block; /* Ensure the label takes the full width if needed */
+}
+.contact-box {
+    border: 2px solid #333;
+    padding: 20px;
+    width: 100%; /* Ensure the box fits within the contact section */
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+.contact form label {
+    margin: 10px 0 5px;
+}
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: #fff; /* Ensure input fields are white for readability */
+}
+.contact form .radio-options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Align items vertically in the center */
+    margin-bottom: 10px;
+    gap: 10px; /* Adjust the gap between the radio options */
+}
+.contact form .radio-options label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Increase the margin between radio buttons */
+}
+.contact form .radio-options input[type="radio"] {
+    margin-left: 5px;
+    margin-top: 12px; /* Adjust this value to move the radio buttons down */
+}
+.contact form button {
+    padding: 10px 15px;
+    background-color: #d4e7e7;
+    color: rgb(0, 0, 0);
+    border: 1.3px solid black;
+    border-radius: 0px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 100px;
+}
+.contact form button:hover {
+    background-color: #1f8574;
+}
+.contact form button:focus {
+    outline: none;
+}
+
+/* Footer Styles */
+footer {
+    width: 1024px;
+    text-align: right; /* Center the footer content */
+    padding: 20px 0;
+    background-color: #d4e7e7; 
+    margin: 0 auto;
+    margin-bottom: 20px; /* Add this line to create space at the bottom */
+}
+footer p {
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 40px; /* Adjust this value to move the footer text to the desired position */
+}
